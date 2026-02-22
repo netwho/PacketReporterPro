@@ -1,0 +1,14 @@
+# Build artifacts
+*.o
+*.d
+build-*/
+CMakeCache.txt
+CMakeFiles/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
