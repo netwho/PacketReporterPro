@@ -886,9 +886,8 @@ Write-Host "    2. Open a capture file"
 Write-Host "    3. Go to Tools -> PacketReporter Pro"
 Write-Host ""
 Write-Host "  Available reports:" -ForegroundColor Cyan
-Write-Host "    - Executive Summary (auto-detects WiFi vs Network)"
-Write-Host "    - Network Summary / Detailed Report"
-Write-Host "    - WiFi Summary / Detailed Report"
+Write-Host "    - Network Analysis: Summary, Detailed, Annotated"
+Write-Host "    - WiFi / 802.11: Summary, Detailed, Annotated"
 Write-Host ""
 Write-Host "  Customization:" -ForegroundColor Cyan
 Write-Host "    Edit files in: $configDir"
