@@ -36,14 +36,14 @@ While the native plugin is the primary focus going forward, there are trade-offs
 
 <!-- Screenshots – see examples/ for full-resolution versions -->
 <p align="center">
-  <img src="examples/screenshot-main-window.png" alt="Main Window" width="360"/>
-  &nbsp;&nbsp;
-  <img src="examples/screenshot-annotated-report.png" alt="Annotated Report" width="360"/>
+  <img src="examples/screenshot-main-window.png" alt="Main Window" width="520"/>
 </p>
 <p align="center">
-  <img src="examples/screenshot-detailed-report.png" alt="Detailed Report" width="360"/>
-  &nbsp;&nbsp;
-  <img src="examples/screenshot-wifi-report.png" alt="WiFi Report" width="360"/>
+  <img src="examples/screenshot-detailed-report.png" alt="Detailed Report" width="240"/>
+  &nbsp;
+  <img src="examples/screenshot-annotated-report.png" alt="Annotated Report" width="240"/>
+  &nbsp;
+  <img src="examples/screenshot-wifi-report.png" alt="WiFi Report" width="240"/>
 </p>
 
 ## Features
