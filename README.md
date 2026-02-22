@@ -38,7 +38,7 @@ While the native plugin is the primary focus going forward, there are trade-offs
 <p align="center">
   <img src="examples/screenshot-main-window.png" alt="Main Window" width="360"/>
   &nbsp;&nbsp;
-  <img src="examples/screenshot-executive-report.png" alt="Executive Report" width="360"/>
+  <img src="examples/screenshot-annotated-report.png" alt="Annotated Report" width="360"/>
 </p>
 <p align="center">
   <img src="examples/screenshot-detailed-report.png" alt="Detailed Report" width="360"/>
@@ -133,7 +133,7 @@ cd build\windows
 > | File | Description |
 > |------|-------------|
 > | `screenshot-main-window.png` | Main window (dark + light theme) |
-> | `screenshot-executive-report.png` | Executive Summary PDF output |
+> | `screenshot-annotated-report.png` | Annotated Report sample page with sidebar |
 > | `screenshot-detailed-report.png` | Detailed Report cover + sample pages |
 > | `screenshot-wifi-report.png` | WiFi Detailed Report sample pages |
 > | `screenshot-help-dialog.png` | Built-in help dialog |
@@ -269,5 +269,5 @@ This plugin follows Wireshark's GPL-2.0 license. See [LICENSE](LICENSE) for deta
 ---
 
 <p align="center">
-Built with ❤️ for the network analysis community — <a href="https://github.com/netwho/PacketReporter-Pro">github.com/netwho/PacketReporter-Pro</a>
+Built with ❤️ for the network analysis community — <a href="https://github.com/netwho/PacketReporterPro">github.com/netwho/PacketReporterPro</a>
 </p>

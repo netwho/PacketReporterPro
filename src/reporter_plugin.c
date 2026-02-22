@@ -69,7 +69,7 @@ void proto_register_packet_reporter_pro(void)
         "PacketReporter Pro " PLUGIN_VERSION_STR
         " (Author & Architect: Walter Hofstetter, "
         "AI-Assisted: yes (Claude) -- build system, installers, cross-platform, docs; "
-        "Repo: https://github.com/netwho/PacketReporterPro)",
+        "Repo: https://github.com/netwho/PacketReporterPro",
         "PacketReporter Pro",
         "packetreporterpro"
     );

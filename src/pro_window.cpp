@@ -983,8 +983,8 @@ void ProWindow::onShowHelp()
     footer->setText(QString(
         "Built with \xe2\x9d\xa4\xef\xb8\x8f for the network analysis community "
         "\xe2\x80\x94 "
-        "<a href='https://github.com/netwho/PacketCirclePro' "
-        "style='color:%1;'>github.com/netwho/PacketCirclePro</a>")
+        "<a href='https://github.com/netwho/PacketReporterPro' "
+        "style='color:%1;'>github.com/netwho/PacketReporterPro</a>")
         .arg(linkCol));
     layout->addWidget(footer);
 
