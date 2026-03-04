@@ -32,7 +32,7 @@ That said, Lua is perfect for adding decode modules or modifying dissectors wher
 While the native plugin is the primary focus going forward, there are trade-offs:
 
 - **Version-dependent** — the plugin must be recompiled for each major Wireshark release (currently shipping binaries for 4.2, 4.4, and 4.6)
-- **QA scope** — testing has been limited to macOS 26 (Tahoe), Ubuntu 24, and Windows 11. The biggest challenge was surprisingly Linux, where certain Wireshark API differences between versions could crash Wireshark during report generation — resolved in v0.1.1
+- **QA scope** — testing has been limited to macOS 26 (Tahoe), Ubuntu 24, and Windows 11. The biggest challenge was surprisingly Linux, where certain Wireshark API differences between versions could crash Wireshark during report generation — resolved in v.0.1.1
 
 <!-- Screenshots – see examples/ for full-resolution versions -->
 <p align="center">
@@ -255,6 +255,40 @@ The capture must be in **monitor mode**. A regular WiFi capture (managed mode) d
 ### Windows: "The specified module could not be found"
 
 Verify `C:\Program Files\Wireshark\libcairo-2.dll` exists. The standard Wireshark installer bundles it.
+
+## Changelog
+
+### v.0.2.1 — 2026-03-04
+
+**Annotated Report — Section parity with Detailed Report**
+- **Section 11 — DSCP Distribution** added: pie chart showing QoS/DSCP markings now appears between IP Protocol Distribution and TTL Distribution (matching Detailed Report)
+- **Section 12 — TCP Summary** extended: Window Size and Segment Length (Min / Max / Avg) rows are now included (matching Detailed Report)
+- **Section 12.1 — TCP Options Negotiated** added as a continuation page showing option presence across SYN packets (matching Detailed Report)
+- **Section 12.4 — Top 10 Connections: Throughput & Response Time** added with full `IP:port(svc) ↔ IP:port(svc)` connection strings and proportional column widths (matching Detailed Report)
+- **Section 12.5 — Top 10 Connections: TCP Flag Usage** added with per-connection SYN/FIN/RST/ACK/PSH counts (matching Detailed Report)
+- All new annotated sections include expert annotation sidebars; sidebar falls back to full-width strip when insufficient vertical space
+
+### v.0.2.0 — 2026-03-04
+
+**Reports**
+- **Project section on page 1** — the three cover-page description lines (customer, segment, notes) are now also printed in a dedicated "Project" subsection on the PCAP File Summary page (section 1) in Detailed and Annotated reports
+- **TCP Analysis — connection readability** — sections 12.4 and 12.5 now display full `IP:port(service)↔IP:port(service)` connection strings with service names for well-known ports (https, ssh, dns, rdp, mysql, …). The Connection column gets 48% of the table width; numeric columns are more compact
+- **Annotated report — adaptive annotation placement** — when a section's right-side sidebar would be too short (< 80 pt), the annotation is automatically rendered as a full-width horizontal strip below the section content instead
+
+**GUI / Logo**
+- **Logo dimension hint** — label below the Choose Logo button shows the recommended size (900 × 300 px, 3:1 ratio)
+- **Logo validation on pick** — shows actual dimensions and ratio with a green "OK" or orange warning; prompts the user if the image is too small or the wrong ratio
+- **Auto-save as `Logo_custom.png`** — picked logos are immediately converted to PNG (via QImage, fixing JPG/BMP support) and saved to `~/.packet_reporter/Logo_custom.png`. They are loaded automatically on the next session
+- **Default Logo button** — reverts to the factory-installed `Logo.png` from `~/.packet_reporter/`
+
+### v.0.1.1 — 2025-12-01
+
+- Linux stability fixes: resolved Wireshark API differences between 4.2 / 4.4 / 4.6 that could crash Wireshark during report generation
+- Initial public release binaries for macOS (universal), Linux (per WS version), Windows
+
+### v.0.1.0 — 2025-11-15
+
+- Initial public release
 
 ## Credits
 
